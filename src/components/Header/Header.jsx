@@ -29,9 +29,7 @@ const NavbarTopElements = ({
             <Navbar.Toggle
                 ref={burgerMenuRef}
                 className={classNames("toggle-icon-wrapper me-md-3 me-2", {
-                    "d-lg-none":
-                        navbarPosition === "top" ||
-                        navbarPosition === "double-top",
+                    "d-lg-none": false,
                     [`d-${navbarBreakPoint}-none`]:
                         navbarPosition === "vertical" ||
                         navbarPosition === "combo"
