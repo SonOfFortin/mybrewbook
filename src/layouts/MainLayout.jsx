@@ -1,21 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import AppContext from "context/Context";
 import classNames from "classnames";
-import NavbarTop from "components/navbar/top/NavbarTop";
-import NavbarVertical from "components/navbar/vertical/NavbarVertical";
-import Footer from "components/footer/Footer";
-import ProductProvider from "components/app/e-commerce/ProductProvider";
-import CourseProvider from "components/app/e-learning/CourseProvider";
+import NavbarTop from "../components/Navbar/NavbarTop";
+import NavbarVertical from "../components/Navbar/NavbarVertical";
+import Footer from "../components/Footer/Footer";
 
 const MainLayout = () => {
-    const { hash, pathname } = useLocation();
-    const isKanban = pathname.includes("kanban");
-    // const isChat = pathname.includes('chat');
-
-    const {
-        config: { isFluid, navbarPosition }
-    } = useContext(AppContext);
+    const { pathname, hash } = useLocation();
 
     useEffect(() => {
         setTimeout(() => {
@@ -37,22 +28,13 @@ const MainLayout = () => {
     }, [pathname]);
 
     return (
-        <div className={isFluid ? "container-fluid" : "container"}>
-            {(navbarPosition === "vertical" || navbarPosition === "combo") && (
-                <NavbarVertical />
-            )}
-            <ProductProvider>
-                <CourseProvider>
-                    <div
-                        className={classNames("content", { "pb-0": isKanban })}
-                    >
-                        <NavbarTop />
-                        {/*------ Main Routes ------*/}
-                        <Outlet />
-                        {!isKanban && <Footer />}
-                    </div>
-                </CourseProvider>
-            </ProductProvider>
+        <div className={"container"}>
+            <NavbarVertical />
+            <div className={classNames("content")}>
+                <NavbarTop />
+                <Outlet />
+                <Footer />
+            </div>
         </div>
     );
 };
