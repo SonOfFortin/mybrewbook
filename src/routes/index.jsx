@@ -1,20 +1,14 @@
-import {
-    BrowserRouter as Router,
-    Navigate,
-    Route,
-    Routes
-} from "react-router-dom";
-
-import Landing from "../components/pages/landing/Landing";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Dashboards from "../components/Dashboards";
+import MainLayout from "../layouts/MainLayout";
 
 const MainRoutes = () => {
     return (
         <Router>
             {/*<GlobalStyle />*/}
             <Routes>
-                <Route path="landing" element={<Landing />} />
                 <Route element={<MainLayout />}>
-                    <Route exact path="/" element={<App />} />
+                    <Route exact path="/" element={<Dashboards />} />
                 </Route>
                 {/*<Route path="*" element={<Error />} />*/}
             </Routes>
