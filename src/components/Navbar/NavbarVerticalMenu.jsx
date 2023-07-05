@@ -1,10 +1,12 @@
 import classNames from "classnames";
-import AppContext from "../Context/Context";
 import PropTypes from "prop-types";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Collapse, Nav } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 import NavbarVerticalMenuItem from "./NavbarVerticalMenuItem";
+import { useDispatch, useSelector } from "react-redux";
+import { selectNavigation } from "../../utils/store/selectors";
+import * as navActions from "../../utils/store/nav";
 
 const CollapseItems = ({ route }) => {
     const { pathname } = useLocation();
@@ -57,14 +59,12 @@ CollapseItems.propTypes = {
 };
 
 const NavbarVerticalMenu = ({ routes }) => {
-    const {
-        config: { showBurgerMenu },
-        setConfig
-    } = useContext(AppContext);
+    const navigation = useSelector(selectNavigation);
+    const dispatch = useDispatch();
 
     const handleNavItemClick = () => {
-        if (showBurgerMenu) {
-            setConfig("showBurgerMenu", !showBurgerMenu);
+        if (navigation.showBurgerMenu) {
+            dispatch(navActions.toggleBurgerMenu());
         }
     };
     return routes.map(route => {

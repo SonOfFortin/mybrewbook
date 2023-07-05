@@ -1,25 +1,24 @@
-import React, { useContext, useEffect, Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Nav, Navbar, Row, Col } from "react-bootstrap";
 import { navbarBreakPoint } from "../../config";
-import AppContext from "../Context/Context";
 import Flex from "../Common/Flex";
 import Logo from "../Common/Logo";
 import NavbarVerticalMenu from "./NavbarVerticalMenu";
 import ToggleButton from "./ToggleButton";
 import routes from "../../routes/siteMaps";
 import { capitalize } from "../../helpers/utils";
+import { useSelector } from "react-redux";
+import { selectNavigation } from "../../utils/store/selectors";
 
 const NavbarVertical = () => {
-    const {
-        config: { isNavbarVerticalCollapsed, showBurgerMenu }
-    } = useContext(AppContext);
+    const navigation = useSelector(selectNavigation);
 
     const HTMLClassList = document.getElementsByTagName("html")[0].classList;
 
     useEffect(() => {
-        if (isNavbarVerticalCollapsed) {
+        if (navigation.isNavbarVerticalCollapsed) {
             HTMLClassList.add("navbar-vertical-collapsed");
         } else {
             HTMLClassList.remove("navbar-vertical-collapsed");
@@ -27,12 +26,12 @@ const NavbarVertical = () => {
         return () => {
             HTMLClassList.remove("navbar-vertical-collapsed-hover");
         };
-    }, [isNavbarVerticalCollapsed, HTMLClassList]);
+    }, [navigation.isNavbarVerticalCollapsed, HTMLClassList]);
 
     //Control mouseEnter event
     let time = null;
     const handleMouseEnter = () => {
-        if (isNavbarVerticalCollapsed) {
+        if (navigation.isNavbarVerticalCollapsed) {
             time = setTimeout(() => {
                 HTMLClassList.add("navbar-vertical-collapsed-hover");
             }, 100);
@@ -70,7 +69,7 @@ const NavbarVertical = () => {
                 <Logo at="navbar-vertical" width={40} />
             </Flex>
             <Navbar.Collapse
-                in={showBurgerMenu}
+                in={navigation.showBurgerMenu}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={{

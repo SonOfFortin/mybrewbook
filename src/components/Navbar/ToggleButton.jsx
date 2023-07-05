@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
-import AppContext from "../Context/Context";
+import { useDispatch } from "react-redux";
+import * as navActions from "../../utils/store/nav";
 
 const renderTooltip = props => (
     <Tooltip style={{ position: "fixed" }} id="button-tooltip" {...props}>
@@ -9,16 +10,14 @@ const renderTooltip = props => (
 );
 
 const ToggleButton = () => {
-    const {
-        config: { isNavbarVerticalCollapsed },
-        setConfig
-    } = useContext(AppContext);
+    const dispatch = useDispatch();
 
     const handleClick = () => {
         document
             .getElementsByTagName("html")[0]
             .classList.toggle("navbar-vertical-collapsed");
-        setConfig("isNavbarVerticalCollapsed", !isNavbarVerticalCollapsed);
+
+        dispatch(navActions.toggleNavbarVertical);
     };
 
     return (

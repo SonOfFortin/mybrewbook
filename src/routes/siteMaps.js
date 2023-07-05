@@ -17,7 +17,7 @@ export const appRoutes = {
         {
             name: "Brassage",
             icon: "fire",
-            to: "/app/chat",
+            to: "/app/batches",
             active: true
         },
         {
@@ -70,7 +70,7 @@ export const appRoutes = {
                         },
                         {
                             name: "Starter de levure",
-                            to: "/tools/yeast-starter",
+                            to: "/tools/yeaststarter",
                             active: true
                         },
                         {
@@ -106,7 +106,7 @@ export const appRoutes = {
                     children: [
                         {
                             name: "température pour l’empâtage",
-                            to: "/tools/rest-temperature",
+                            to: "/tools/resttemperature",
                             active: true
                         },
                         {
