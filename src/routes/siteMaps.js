@@ -39,7 +39,7 @@ export const appRoutes = {
         },
         {
             name: "Stock",
-            icon: "shelves",
+            icon: "boxes",
             active: true,
             children: [
                 {
@@ -56,7 +56,7 @@ export const appRoutes = {
         },
         {
             name: "Outils",
-            icon: "screwdriver-wrench",
+            icon: "tools",
             active: true,
             children: [
                 {

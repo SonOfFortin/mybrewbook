@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "./utils/store/index";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MainRoutes from "./routes/index";
+import "./helpers/initFA";
 
 const root = ReactDOM.createRoot(document.getElementById("main"));
 
