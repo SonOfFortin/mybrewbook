@@ -4,17 +4,15 @@ import { Navbar, Nav } from "react-bootstrap";
 import classNames from "classnames";
 import { navbarBreakPoint, topNavbarBreakpoint } from "../../config";
 import { useDispatch, useSelector } from "react-redux";
-import { selectNavigation } from "../../utils/store/selectors";
 import * as navActions from "../../utils/store/nav";
 import Logo from "../Common/Logo";
-
-import NavbarTopDropDownMenus from "./NavbarTopDropDownMenus";
 import TopNavRightSideNavItem from "./TopNavRightSideNavItem";
+import { selectNavigation } from "../../utils/store/selectors";
 
 const NavbarTop = () => {
     const [showDropShadow, setShowDropShadow] = useState(false);
-    const navigation = useSelector(selectNavigation);
     const dispatch = useDispatch();
+    const navigation = useSelector(selectNavigation);
 
     const handleBurgerMenu = () => {
         dispatch(navActions.toggleBurgerMenu());
@@ -45,7 +43,7 @@ const NavbarTop = () => {
             expand={true}
         >
             <NavbarTopElements
-                navbarCollapsed={navbarCollapsed}
+                navbarCollapsed={navigation.isNavbarVerticalCollapsed}
                 handleBurgerMenu={handleBurgerMenu}
                 burgerMenuRef={burgerMenuRef}
             />

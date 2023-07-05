@@ -6,7 +6,7 @@ import store from "./utils/store/index";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MainRoutes from "./routes/index";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("main"));
 
 // on créer le queryClient
 const queryClient = new QueryClient();
