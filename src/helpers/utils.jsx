@@ -12,6 +12,9 @@ export const breakpoints = {
     xxl: 1540
 };
 
+export const setItemToStore = (key, payload, store = localStorage) =>
+    store.setItem(key, payload);
+
 export const capitalize = str =>
     (str.charAt(0).toUpperCase() + str.slice(1)).replace(/-/g, " ");
 

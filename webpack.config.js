@@ -30,7 +30,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            sourceMap: true
+                            //sourceMap: true
                         }
                     },
                     {

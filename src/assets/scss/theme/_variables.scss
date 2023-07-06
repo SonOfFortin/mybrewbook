@@ -1,7 +1,7 @@
 /* prettier-ignore */
 @use 'sass:math';
-@import 'colors';
-$prefix: 'falcon-';
+@import "colors";
+$prefix: "mbb-";
 $spacer-x1: 1.25rem;
 
 // Grid containers
@@ -10,20 +10,20 @@ $spacer-x1: 1.25rem;
 // scss-docs-start container-max-widths
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1480px
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1480px
 ) !default;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1540px
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1540px
 ) !default;
 
 //*-----------------------------------------------
@@ -32,19 +32,19 @@ $grid-breakpoints: (
 
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.8,
-  5: $spacer * 3,
-  6: $spacer * 4,
-  7: $spacer * 5,
-  8: $spacer * 7.5,
-  9: $spacer * 10,
-  10: $spacer * 12.5,
-  11: $spacer * 15,
-  x1: $spacer-x1
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.8,
+    5: $spacer * 3,
+    6: $spacer * 4,
+    7: $spacer * 5,
+    8: $spacer * 7.5,
+    9: $spacer * 10,
+    10: $spacer * 12.5,
+    11: $spacer * 15,
+    x1: $spacer-x1
 ) !default;
 
 //*-----------------------------------------------
@@ -71,10 +71,10 @@ $border-color: var(--#{$prefix}border-color);
 $border-width: 1px !default;
 
 $border-styles: (
-  dotted: 'dotted !important',
-  dashed: 'dashed !important',
-  none: 'none !important',
-  hidden: 'hidden !important'
+    dotted: "dotted !important",
+    dashed: "dashed !important",
+    none: "none !important",
+    hidden: "hidden !important"
 ) !default;
 
 $disabled-border: transparent !default;
@@ -83,11 +83,11 @@ $disabled-border: transparent !default;
 //|   Opacity
 //-----------------------------------------------*/
 $opacities: (
-  25: 0.25,
-  50: 0.5,
-  75: 0.75,
-  85: 0.85,
-  100: 1
+    25: 0.25,
+    50: 0.5,
+    75: 0.75,
+    85: 0.85,
+    100: 1
 ) !default;
 
 //*-----------------------------------------------
@@ -129,14 +129,32 @@ $border-radius-lg: 0.375rem !default;
 //*-----------------------------------------------
 //|   Fonts Families
 //-----------------------------------------------*/
-$font-family-sans-serif: 'Poppins', -apple-system, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$font-family-monospace: 'SFMono-Regular', Menlo, Monaco, Consolas,
-  'Liberation Mono', 'Courier New', monospace !default;
-$font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-sans-serif:
+    "Poppins",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol" !default;
+$font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:
+    "Open Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol" !default;
 
 //*-----------------------------------------------
 //|   Fonts
@@ -145,31 +163,31 @@ $type-scale: 1.2 !default;
 $font-size-base: 1rem !default;
 $font-sizes: () !default;
 $font-sizes: map-merge(
-  (
-    '-2': math.div(1, pow($type-scale, 2)) * $font-size-base,
-    //11.11
-    '-1': math.div(1, $type-scale) * $font-size-base,
-    //13.33
-    0: $font-size-base,
-    //16
-    1: pow($type-scale, 1) * $font-size-base,
-    // 19.2
-    2: pow($type-scale, 2) * $font-size-base,
-    // 23.04
-    3: pow($type-scale, 3) * $font-size-base,
-    // 27.65
-    4: pow($type-scale, 4) * $font-size-base,
-    // 33.18
-    5: pow($type-scale, 5) * $font-size-base,
-    // 39.81
-    6: pow($type-scale, 6) * $font-size-base,
-    // 47.78
-    7: pow($type-scale, 7) * $font-size-base,
-    // 57.33
-    8: pow($type-scale, 8) * $font-size-base,
-    // 68.79
-  ),
-  $font-sizes
+    (
+        "-2": math.div(1, pow($type-scale, 2)) * $font-size-base,
+        //11.11
+        "-1": math.div(1, $type-scale) * $font-size-base,
+        //13.33
+        0: $font-size-base,
+        //16
+        1: pow($type-scale, 1) * $font-size-base,
+        // 19.2
+        2: pow($type-scale, 2) * $font-size-base,
+        // 23.04
+        3: pow($type-scale, 3) * $font-size-base,
+        // 27.65
+        4: pow($type-scale, 4) * $font-size-base,
+        // 33.18
+        5: pow($type-scale, 5) * $font-size-base,
+        // 39.81
+        6: pow($type-scale, 6) * $font-size-base,
+        // 47.78
+        7: pow($type-scale, 7) * $font-size-base,
+        // 57.33
+        8: pow($type-scale, 8) * $font-size-base,
+        // 68.79
+    ),
+    $font-sizes
 );
 
 $font-size-sm: $font-size-base * 0.875 !default;
@@ -189,7 +207,7 @@ $h2-font-size: map_get($font-sizes, 4) !default;
 $h3-font-size: map_get($font-sizes, 3) !default;
 $h4-font-size: map_get($font-sizes, 2) !default;
 $h5-font-size: map_get($font-sizes, 1) !default;
-$h6-font-size: map_get($font-sizes, '-1') !default;
+$h6-font-size: map_get($font-sizes, "-1") !default;
 
 $headings-font-family: $font-family-sans-serif !default;
 $headings-font-weight: $font-weight-medium !default;
@@ -197,12 +215,12 @@ $headings-color: var(--#{$prefix}headings-color) !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: map_get($font-sizes, 8),
-  2: map_get($font-sizes, 7),
-  3: map_get($font-sizes, 6),
-  4: map_get($font-sizes, 5),
-  5: map_get($font-sizes, 4),
-  6: map_get($font-sizes, 3)
+    1: map_get($font-sizes, 8),
+    2: map_get($font-sizes, 7),
+    3: map_get($font-sizes, 6),
+    4: map_get($font-sizes, 5),
+    5: map_get($font-sizes, 4),
+    6: map_get($font-sizes, 3)
 ) !default;
 
 $display-font-weight: $font-weight-black !default;
@@ -235,22 +253,22 @@ $accordion-button-active-bg: var(--#{$prefix}card-bg);
 $table-head-bg: $gray-900 !default; //Ntr
 $table-head-color: $dark !default; // Ntr
 
-$table-border-color: map-get($grays, '200') !default;
+$table-border-color: map-get($grays, "200") !default;
 $table-dark-bg: $gray-1000 !default;
 $table-dark-border-color: lighten($gray-1000, 7.5%) !default;
 $table-striped-order: even !default;
 $table-cell-padding-y: 0.75rem !default;
 $table-cell-padding-x: 0.75rem !default;
 $table-group-separator-color: inherit !default;
-$table-striped-bg: map-get($grays, '100') !default;
-$table-striped-color: map-get($grays, '700') !default;
+$table-striped-bg: map-get($grays, "100") !default;
+$table-striped-color: map-get($grays, "700") !default;
 
 //*-----------------------------------------------
 //|   Buttons
 //-----------------------------------------------*/
 $btn-falcon-box-shadow: var(--#{$prefix}btn-falcon-box-shadow) !default;
 $btn-falcon-hover-box-shadow: var(
-  --#{$prefix}btn-falcon-hover-box-shadow
+    --#{$prefix}btn-falcon-hover-box-shadow
 ) !default;
 
 //*-----------------------------------------------
@@ -265,9 +283,11 @@ $input-btn-padding-x-sm: 0.75rem !default;
 $input-btn-padding-y-lg: 0.375rem !default;
 $input-btn-padding-x-lg: 1.25rem !default;
 
-$btn-reveal-hover-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1),
-  0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba($black, 0.07),
-  0 1px 2px 0 rgba($black, 0.08) !default;
+$btn-reveal-hover-shadow:
+    0 0 0 1px rgba(43, 45, 80, 0.1),
+    0 2px 5px 0 rgba(43, 45, 80, 0.08),
+    0 1px 1.5px 0 rgba($black, 0.07),
+    0 1px 2px 0 rgba($black, 0.08) !default;
 $btn-font-weight: $font-weight-medium !default;
 $btn-focus-width: 0 !default;
 
@@ -283,7 +303,7 @@ $form-check-margin-bottom: 0.34375rem !default;
 $form-label-font-size: $font-size-sm !default;
 $form-check-input-bg: transparent !default;
 $form-check-input-border: 1px solid
-  var(--#{$prefix}form-check-input-border-color) !default;
+    var(--#{$prefix}form-check-input-border-color) !default;
 $form-switch-color: $gray-500 !default;
 $form-switch-focus-color: var(--#{$prefix}gray-500) !default;
 $form-switch-focus-bg-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%239da9bb'/%3E%3C/svg%3E");
@@ -307,19 +327,19 @@ $navbar-dark-color: var(--#{$prefix}navbar-dark-color) !default;
 $navbar-dark-hover-color: var(--#{$prefix}navbar-dark-hover-color) !default;
 $navbar-dark-active-color: var(--#{$prefix}navbar-dark-active-color) !default;
 $navbar-dark-disabled-color: var(
-  --#{$prefix}navbar-dark-disabled-color
+    --#{$prefix}navbar-dark-disabled-color
 ) !default;
 $navbar-dark-toggler-border-color: var(
-  --#{$prefix}navbar-dark-toggler-border-color
+    --#{$prefix}navbar-dark-toggler-border-color
 ) !default;
 $navbar-light-color: var(--#{$prefix}navbar-light-color) !default;
 $navbar-light-hover-color: var(--#{$prefix}navbar-light-hover-color) !default;
 $navbar-light-active-color: var(--#{$prefix}navbar-light-active-color) !default;
 $navbar-light-disabled-color: var(
-  --#{$prefix}navbar-light-disabled-color
+    --#{$prefix}navbar-light-disabled-color
 ) !default;
 $navbar-light-toggler-border-color: var(
-  --#{$prefix}navbar-light-toggler-border-color
+    --#{$prefix}navbar-light-toggler-border-color
 ) !default;
 
 $navbar-font-size: $font-size-base * 0.8 !default;
@@ -338,15 +358,15 @@ $top-nav-height: var(--#{$prefix}top-nav-height) !default;
 $standard-nav-height: 3.5625rem !default;
 
 $navbar-light-toggler-icon-bg: str-replace(
-  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#9da9bb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M0 6h30M0 14h30M0 22h30'/%3E%3C/svg%3E"),
-  '#',
-  '%23'
+    url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#9da9bb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M0 6h30M0 14h30M0 22h30'/%3E%3C/svg%3E"),
+    "#",
+    "%23"
 ) !default;
 
 $navbar-dark-toggler-icon-bg: str-replace(
-  url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#9da9bb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M0 6h30M0 14h30M0 22h30'/%3E%3C/svg%3E"),
-  '#',
-  '%23'
+    url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#9da9bb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M0 6h30M0 14h30M0 22h30'/%3E%3C/svg%3E"),
+    "#",
+    "%23"
 ) !default;
 
 // Navbar Glass
@@ -363,47 +383,47 @@ $navbar-brand-font-weight: $font-weight-bolder !default;
 //|   Nav
 //-----------------------------------------------*/
 $link-color: $primary !default;
-$link-color-dark: map-get($theme-dark-colors, 'primary') !default;
+$link-color-dark: map-get($theme-dark-colors, "primary") !default;
 
 $nav-link-color: null;
 $nav-link-hover-color: null;
-$nav-link-disabled-color: map-get($grays, '600') !default;
+$nav-link-disabled-color: map-get($grays, "600") !default;
 
 // /*-----------------------------------------------
 //|   Navbar Tabs //new
 //-----------------------------------------------*/
 
 $nav-tabs-border-width: 2px !default;
-$nav-tabs-border-color: map-get($grays, '300') !default;
-$nav-tabs-link-hover-border-color: map-get($grays, '200') map-get($grays, '200')
-  $nav-tabs-border-color !default;
-$nav-tabs-link-active-color: map-get($grays, '700') !default;
+$nav-tabs-border-color: map-get($grays, "300") !default;
+$nav-tabs-link-hover-border-color: map-get($grays, "200") map-get($grays, "200")
+    $nav-tabs-border-color !default;
+$nav-tabs-link-active-color: map-get($grays, "700") !default;
 $nav-tabs-link-active-bg: $body-bg;
-$nav-tabs-link-active-border-color: map-get($grays, '300')
-  map-get($grays, '300') $nav-tabs-link-active-bg;
+$nav-tabs-link-active-border-color: map-get($grays, "300")
+    map-get($grays, "300") $nav-tabs-link-active-bg;
 
-$nav-pills-link-active-color: map-get($theme-colors, 'white') !default;
-$nav-pills-link-active-bg: map-get($theme-colors, 'primary') !default;
+$nav-pills-link-active-color: map-get($theme-colors, "white") !default;
+$nav-pills-link-active-bg: map-get($theme-colors, "primary") !default;
 
 //*-----------------------------------------------
 //|   Dropdowns | Dropdown menu container and contents.
 //-----------------------------------------------*/
-$dropdown-bg: map-get($grays, 'white') !default;
-$dropdown-color: map-get($grays, '300') !default;
-$dropdown-link-color: map-get($grays, '900') !default;
-$dropdown-link-hover-color: darken(map-get($grays, '900'), 5%) !default;
-$dropdown-link-hover-bg: map-get($grays, '100') !default;
-$dropdown-link-disabled-color: map-get($grays, '600') !default;
+$dropdown-bg: map-get($grays, "white") !default;
+$dropdown-color: map-get($grays, "300") !default;
+$dropdown-link-color: map-get($grays, "900") !default;
+$dropdown-link-hover-color: darken(map-get($grays, "900"), 5%) !default;
+$dropdown-link-hover-bg: map-get($grays, "100") !default;
+$dropdown-link-disabled-color: map-get($grays, "600") !default;
 $dropdown-divider-bg: $border-color !default;
 $dropdown-border-color: $border-color !default;
 $dropdown-link-active-color: $white !default;
-$dropdown-link-active-bg: map-get($theme-colors, 'primary') !default;
+$dropdown-link-active-bg: map-get($theme-colors, "primary") !default;
 $dropdown-box-shadow: $box-shadow !default;
-$dropdown-header-color: map-get($grays, '600') !default;
+$dropdown-header-color: map-get($grays, "600") !default;
 
 //- New. Need to check is dropdown-dark properties needed?
-$dropdown-dark-color: map-get($grays, '300') !default;
-$dropdown-dark-bg: map-get($grays, '800') !default;
+$dropdown-dark-color: map-get($grays, "300") !default;
+$dropdown-dark-bg: map-get($grays, "800") !default;
 $dropdown-dark-border-color: $dropdown-border-color !default;
 $dropdown-dark-divider-bg: $dropdown-divider-bg !default;
 $dropdown-dark-box-shadow: null;
@@ -412,8 +432,8 @@ $dropdown-dark-link-hover-color: $white;
 $dropdown-dark-link-hover-bg: rgba($white, 0.15) !default;
 $dropdown-dark-link-active-color: $dropdown-link-active-color;
 $dropdown-dark-link-active-bg: $dropdown-link-active-bg;
-$dropdown-dark-link-disabled-color: map-get($grays, '500') !default;
-$dropdown-dark-header-color: map-get($grays, '500') !default;
+$dropdown-dark-link-disabled-color: map-get($grays, "500") !default;
+$dropdown-dark-header-color: map-get($grays, "500") !default;
 
 $dropdown-font-size: $navbar-font-size !default;
 $dropdown-item-padding-y: map_get($spacers, 1) !default;
@@ -432,11 +452,11 @@ $pagination-padding-x-lg: 1.5rem !default;
 
 $pagination-color: $black !default;
 $pagination-bg: $white !default;
-$pagination-border-color: map-get($grays, '200') !default;
+$pagination-border-color: map-get($grays, "200") !default;
 $pagination-focus-color: var(--#{$prefix}pagination-focus-color) !default;
 $pagination-focus-bg: var(--#{$prefix}pagination-focus-bg) !default;
 $pagination-focus-box-shadow: var(
-  --#{$prefix}pagination-focus-box-shadow
+    --#{$prefix}pagination-focus-box-shadow
 ) !default;
 $pagination-hover-color: $white !default;
 $pagination-hover-bg: var(--#{$prefix}primary) !default;
@@ -447,7 +467,7 @@ $pagination-active-border-color: var(--#{$prefix}primary) !default;
 $pagination-disabled-color: var(--#{$prefix}pagination-disabled-color) !default;
 $pagination-disabled-bg: var(--#{$prefix}pagination-disabled-bg) !default;
 $pagination-disabled-border-color: var(
-  --#{$prefix}pagination-disabled-border-color
+    --#{$prefix}pagination-disabled-border-color
 ) !default;
 
 //*-----------------------------------------------
@@ -473,7 +493,7 @@ $card-color: null !default;
 //-----------------------------------------------*/
 
 $tooltip-padding-y: 0.5rem !default;
-$tooltip-font-size: map_get($font-sizes, '-1') !default;
+$tooltip-font-size: map_get($font-sizes, "-1") !default;
 
 //*-----------------------------------------------
 //|   Badge
@@ -495,8 +515,8 @@ $zindex-modal: 1055 !default;
 $list-group-color: var(--#{$prefix}gray-800) !default;
 $list-group-bg: $white !default;
 $list-group-border-color: $border-color !default;
-$list-group-action-hover-color: map-get($grays, '700') !default;
-$list-group-hover-bg: map-get($grays, '100') !default;
+$list-group-action-hover-color: map-get($grays, "700") !default;
+$list-group-hover-bg: map-get($grays, "100") !default;
 $list-group-action-active-bg: var(--#{$prefix}gray-200) !default;
 
 //*-----------------------------------------------
@@ -511,8 +531,8 @@ $thumbnail-border-color: var(--#{$prefix}thumbnail-bg) !default;
 //-----------------------------------------------*/
 $breadcrumb-padding-x: 0 !default;
 $breadcrumb-margin-bottom: 0 !default;
-$breadcrumb-bg: 'transparent';
-$breadcrumb-divider: quote('/') !default;
+$breadcrumb-bg: "transparent";
+$breadcrumb-divider: quote("/") !default;
 
 //*-----------------------------------------------
 //|   Carousel
@@ -550,25 +570,25 @@ $treeview-text-color: var(--#{$prefix}gray-600) !default;
 //----------------------------------------------
 
 $viewport-heights: (
-  25: 25vh,
-  50: 50vh,
-  75: 75vh,
-  100: 100vh
+    25: 25vh,
+    50: 50vh,
+    75: 75vh,
+    100: 100vh
 ) !default;
 
 $viewport-widths: (
-  25: 25vw,
-  50: 50vw,
-  75: 75vw,
-  100: 100vw
+    25: 25vw,
+    50: 50vw,
+    75: 75vw,
+    100: 100vw
 ) !default;
 
 $sizes: (
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%,
-  auto: auto
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
 ) !default;
 
 // /*-----------------------------------------------
@@ -589,22 +609,22 @@ $responsive-footer-height: 0.625rem !default;
 //-----------------------------------------------*/
 
 $avatars-dimension: (
-  's': toRem(20rem),
-  'm': toRem(24rem),
-  'l': toRem(28rem),
-  'xl': toRem(32rem),
-  '2xl': toRem(40rem),
-  '3xl': toRem(56rem),
-  '4xl': toRem(98rem),
-  '5xl': toRem(168rem)
+    "s": toRem(20rem),
+    "m": toRem(24rem),
+    "l": toRem(28rem),
+    "xl": toRem(32rem),
+    "2xl": toRem(40rem),
+    "3xl": toRem(56rem),
+    "4xl": toRem(98rem),
+    "5xl": toRem(168rem)
 ) !default;
 
 $gutters: () !default;
 $gutters: map-merge(
-  $spacers,
-  (
-    card: $card-spacer-x * 2
-  )
+    $spacers,
+    (
+        card: $card-spacer-x * 2
+    )
 );
 
 //*-----------------------------------------------
@@ -637,12 +657,12 @@ $navbar-vertical-collapsed-hover-shadow: 0.625rem 0 0.625rem -0.5625rem rgba($bl
 //|   Navbar Default
 //-----------------------------------------------*/
 $navbar-vertical-default-bg-color: var(--#{$prefix}bg-navbar-glass) !default;
-$navbar-vertical-default-link-color: #{map-get($grays, '700')} !default;
-$navbar-vertical-default-link-hover-color: #{map-get($grays, '1000')} !default;
-$navbar-vertical-default-link-active-color: #{map-get($theme-colors, 'primary')} !default;
-$navbar-vertical-default-link-disable-color: #{map-get($grays, '400')} !default;
+$navbar-vertical-default-link-color: #{map-get($grays, "700")} !default;
+$navbar-vertical-default-link-hover-color: #{map-get($grays, "1000")} !default;
+$navbar-vertical-default-link-active-color: #{map-get($theme-colors, "primary")} !default;
+$navbar-vertical-default-link-disable-color: #{map-get($grays, "400")} !default;
 $navbar-vertical-default-hr-color: #{rgba($black, 0.08)} !default;
-$navbar-vertical-default-scrollbar-color: #{rgba(map-get($grays, '600'), 0.3)} !default;
+$navbar-vertical-default-scrollbar-color: #{rgba(map-get($grays, "600"), 0.3)} !default;
 $navbar-vertical-default-label-color: var(--#{$prefix}gray-500) !default;
 
 //*-----------------------------------------------
@@ -661,11 +681,11 @@ $navbar-vertical-inverted-label-color: $gray-700 !default;
 //|   Navbar Vibrant
 //-----------------------------------------------*/
 $navbar-vertical-vibrant-bg-image: linear-gradient(
-    -45deg,
-    rgba(0, 160, 255, 0.86),
-    #0048a2
-  ),
-  url(../img/generic/bg-navbar.png) !default;
+        -45deg,
+        rgba(0, 160, 255, 0.86),
+        #0048a2
+    ),
+    url(../img/generic/bg-navbar.png) !default;
 $navbar-vertical-vibrant-link-color: rgba($white, 0.75) !default;
 $navbar-vertical-vibrant-link-hover-color: $white !default;
 $navbar-vertical-vibrant-link-active-color: $navbar-vertical-vibrant-link-hover-color !default;

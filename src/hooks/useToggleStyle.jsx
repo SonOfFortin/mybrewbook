@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const useToggleStylesheet = (isRTL, isDark, configDispatch) => {
+//const useToggleStylesheet = (isDark, configDispatch) => {
+const useToggleStylesheet = (isRTL, isDark) => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
@@ -37,9 +38,9 @@ const useToggleStylesheet = (isRTL, isDark, configDispatch) => {
 
     useEffect(() => {
         document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-        configDispatch({
+        /*configDispatch({
             type: "REFRESH"
-        });
+        });*/
     }, [isDark]);
 
     return { isLoaded };

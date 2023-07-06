@@ -105,7 +105,7 @@ export const appRoutes = {
                     active: true,
                     children: [
                         {
-                            name: "température pour l’empâtage",
+                            name: "Température",
                             to: "/tools/resttemperature",
                             active: true
                         },
