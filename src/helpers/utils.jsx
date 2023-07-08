@@ -24,3 +24,18 @@ export const camelize = str => {
         return index === 0 ? match.toLowerCase() : match.toUpperCase();
     });
 };
+
+export const getColor = (name, dom = document.documentElement) => {
+    return getComputedStyle(dom).getPropertyValue(`--mbb-${name}`).trim();
+};
+
+// get file size
+export const getSize = size => {
+    if (size < 1024) {
+        return `${size} Byte`;
+    } else if (size < 1024 * 1024) {
+        return `${(size / 1024).toFixed(2)} KB`;
+    } else {
+        return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+    }
+};

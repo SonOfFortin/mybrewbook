@@ -1,16 +1,19 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 //import {} from '@fortawesome/free-brands-svg-icons';
-//import {} from "@fortawesome/free-regular-svg-icons";
+
+import { faQuestionCircle as farQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import {
     faBell,
     faBook,
     faBoxes,
     faChartPie,
+    faEllipsisH,
     faFire,
     faSun,
-    faTools
+    faTools,
+    faTrashAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -19,9 +22,12 @@ library.add(
     faBook,
     faBoxes,
     faChartPie,
+    faEllipsisH,
     faFire,
     faSun,
-    faTools
+    faTools,
+    faTrashAlt,
     // Brand
     // Regular
+    farQuestionCircle
 );
