@@ -1,0 +1,20 @@
+/*-----------------------------------------------
+|   CardList
+-----------------------------------------------*/
+.cardList {
+    box-shadow: var(--#{$prefix}box-shadow);
+}
+
+.cardList-body-col {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: $card-border-radius;
+}
+
+.cardList-body-col:hover {
+    background-color: var(--#{$prefix}gray-300) !important;
+}
+
+.cardList-body-col-link:hover {
+    text-decoration: none;
+}

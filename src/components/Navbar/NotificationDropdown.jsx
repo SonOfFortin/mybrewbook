@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Card, Dropdown, ListGroup } from "react-bootstrap";
 import { isIterableArray } from "../../helpers/utils";
 import useFakeFetch from "../../hooks/useFakeFetch";
-import CardHeader from "../Common/CardHeader";
+import CardHeader from "../Common/Card/CardHeader";
 import Notification from "../Notification/Notification";
 
 import {

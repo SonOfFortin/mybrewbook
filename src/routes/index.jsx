@@ -57,7 +57,7 @@ const MainRoutes = () => {
                     {/* Recette */}
                     <Route path="receipts/myrecipes" element={<MyRecipes />} />
                     <Route path="receipts/library" element={<Library />} />
-                    <Route path="receipts/Retail" element={<Retail />} />
+                    <Route path="receipts/Retail/:id?" element={<Retail />} />
                     {/* Inventaire / Stock */}
                     <Route path="shelves/inventory" element={<Inventory />} />
                     <Route path="shelves/shopping" element={<Shopping />} />

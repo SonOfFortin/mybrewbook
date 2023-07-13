@@ -6420,6 +6420,27 @@ fieldset:disabled .tox .tox-dialog__footer .tox-button--secondary,
   }
 }
 
+/*-----------------------------------------------
+|   CardList
+-----------------------------------------------*/
+.cardList {
+  box-shadow: var(--mbb-box-shadow);
+}
+
+.cardList-body-col {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border-radius: 0.375rem;
+}
+
+.cardList-body-col:hover {
+  background-color: var(--mbb-gray-300) !important;
+}
+
+.cardList-body-col-link:hover {
+  text-decoration: none;
+}
+
 .accordion {
   --mbb-accordion-color: #5e6e82;
   --mbb-accordion-bg: white;

@@ -29,7 +29,7 @@ const ImageUpload = () => {
     };
 
     return (
-        <>
+        <div>
             <div {...getRootProps({ className: "dropzone-area py-6" })}>
                 <input {...getInputProps()} />
                 <Flex justifyContent="center">
@@ -79,7 +79,7 @@ const ImageUpload = () => {
                     </Flex>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
