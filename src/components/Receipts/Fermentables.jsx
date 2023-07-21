@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import Flex from "../Common/Flex";
 
-const InfoStyle = () => {
+const Fermentables = () => {
     return (
         <Card className="h-md-100">
             <Card.Header className="pb-0"></Card.Header>
@@ -14,4 +14,4 @@ const InfoStyle = () => {
     );
 };
 
-export default InfoStyle;
+export default Fermentables;

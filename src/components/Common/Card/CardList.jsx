@@ -21,7 +21,7 @@ const CardList = ({ IsCollapse, Title, Data }) => {
                         onClick={() => setOpen(!open)}
                     >
                         <FontAwesomeIcon
-                            icon={open ? "chevron-down" : "chevron-up"}
+                            icon={open ? "chevron-up" : "chevron-down"}
                             className="fs--2"
                         />
                     </Link>

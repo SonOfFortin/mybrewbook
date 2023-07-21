@@ -24,6 +24,11 @@ import Carbonation from "../components/pages/tools/Carbonation";
 import Color from "../components/pages/tools/Color";
 import RestTemperature from "../components/pages/tools/RestTemperature";
 import Calibration from "../components/pages/tools/Calibration";
+import Settings from "../components/pages/User/Settings";
+import About from "../components/pages/User/About";
+import Profile from "../components/pages/User/Profile";
+import Support from "../components/pages/User/Support";
+import Help from "../components/pages/User/Help";
 
 const MainRoutes = () => {
     const theme = useSelector(selectTheme);
@@ -54,6 +59,12 @@ const MainRoutes = () => {
                     <Route exact path="/" element={<Dashboards />} />
                     {/* App */}
                     <Route path="app/batches" element={<Batches />} />
+                    {/* Users */}
+                    <Route path="user/settings" element={<Settings />} />
+                    <Route path="user/about" element={<About />} />
+                    <Route path="user/profile" element={<Profile />} />
+                    <Route path="user/support" element={<Support />} />
+                    <Route path="user/help" element={<Help />} />
                     {/* Recette */}
                     <Route path="receipts/myrecipes" element={<MyRecipes />} />
                     <Route path="receipts/library" element={<Library />} />

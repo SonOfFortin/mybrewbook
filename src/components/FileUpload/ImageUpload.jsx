@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Flex from "../Common/Flex";
 import cloudUpload from "../../assets/img/icons/cloud-upload.svg";
@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image as Images } from "react-bootstrap";
 import { getSize } from "../../helpers/utils";
 
-const ImageUpload = () => {
-    const [files, setFiles] = useState([]);
+const ImageUpload = ({ files, setFiles }) => {
+    //const [files, setFiles] = useState([]);
 
     const { getRootProps, getInputProps } = useDropzone({
         accept: {
@@ -34,7 +34,7 @@ const ImageUpload = () => {
                 <input {...getInputProps()} />
                 <Flex justifyContent="center">
                     <img src={cloudUpload} alt="" width={25} className="me-2" />
-                    <p className="fs-0 mb-0 text-700">Drop your images here</p>
+                    <p className="fs-0 mb-0 text-700">Déposez vos images ici</p>
                 </Flex>
             </div>
 
@@ -79,6 +79,9 @@ const ImageUpload = () => {
                     </Flex>
                 ))}
             </div>
+            <p className="text-center">
+                L'utilisation d'images non libres de droits n'est pas autorisée
+            </p>
         </div>
     );
 };
