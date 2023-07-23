@@ -60,7 +60,7 @@ const Retail = () => {
                     />
                 </Col>
                 <Col xs={12} lg={6} xl={4}>
-                    <Equipment />
+                    <Equipment />v
                 </Col>
                 <Col xs={12} lg={6} xl={3}>
                     <InfoStyle />
