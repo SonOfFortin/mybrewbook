@@ -57,7 +57,8 @@ const Retail = () => {
                         StyleId={info.StyleId}
                         Image={info.ImageSrc}
                         handelChange={handelInfoChange}
-                    />
+                    />{" "}
+                    SonOfFortin
                 </Col>
                 <Col xs={12} lg={6} xl={4}>
                     <Equipment />
