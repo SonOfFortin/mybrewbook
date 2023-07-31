@@ -5,7 +5,8 @@ export const Receipts = [
         Autor: "YeTiLand Brewery",
         StyleId: 0,
         Image: "/image/recipes/logo/Leef.jpg",
-        ClassificationRecipes: 0
+        ClassificationRecipes: 0,
+        AutoScaling: true
     },
     {
         Id: 2,
@@ -13,7 +14,8 @@ export const Receipts = [
         Autor: "TexasTom BeerFactory",
         StyleId: 1,
         Image: "",
-        ClassificationRecipes: 0
+        ClassificationRecipes: 0,
+        AutoScaling: true
     },
     {
         Id: 3,
@@ -21,7 +23,8 @@ export const Receipts = [
         Autor: "Matthew",
         StyleId: 2,
         Image: "/image/recipes/logo/RedBeer.jpg",
-        ClassificationRecipes: 0
+        ClassificationRecipes: 0,
+        AutoScaling: false
     },
     {
         Id: 4,
@@ -29,7 +32,8 @@ export const Receipts = [
         Autor: "Apocryphy",
         StyleId: 0,
         Image: "",
-        ClassificationRecipes: 0
+        ClassificationRecipes: 0,
+        AutoScaling: false
     },
     {
         Id: 5,
@@ -37,7 +41,8 @@ export const Receipts = [
         Autor: "YeTiLand Brewery",
         StyleId: 0,
         Image: "/image/recipes/logo/1664.jpg",
-        ClassificationRecipes: 1
+        ClassificationRecipes: 1,
+        AutoScaling: true
     },
     {
         Id: 6,
@@ -45,7 +50,8 @@ export const Receipts = [
         Autor: "TexasTom BeerFactory",
         StyleId: 1,
         Image: "",
-        ClassificationRecipes: 1
+        ClassificationRecipes: 1,
+        AutoScaling: true
     },
     {
         Id: 7,
@@ -53,7 +59,8 @@ export const Receipts = [
         Autor: "Matthew",
         StyleId: 2,
         Image: "/image/recipes/logo/SamuelAdams.jpg",
-        ClassificationRecipes: 2
+        ClassificationRecipes: 2,
+        AutoScaling: true
     }
 ];
 

@@ -2,9 +2,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 //import {} from '@fortawesome/free-brands-svg-icons';
 
-import { faQuestionCircle as farQuestionCircle } from "@fortawesome/free-regular-svg-icons";
+//import { faQuestionCircle as farQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import {
+    faArrowRightArrowLeft,
     faBell,
     faBook,
     faBoxes,
@@ -23,7 +24,9 @@ import {
     faHeadset,
     faLanguage,
     faMoon,
+    faPen,
     faRightToBracket,
+    faScaleBalanced,
     faSun,
     faTools,
     faTrashAlt,
@@ -33,6 +36,7 @@ import {
 
 library.add(
     // Solid
+    faArrowRightArrowLeft,
     faBell,
     faBook,
     faBoxes,
@@ -51,13 +55,15 @@ library.add(
     faLanguage,
     faHeadset,
     faMoon,
+    faPen,
     faRightToBracket,
+    faScaleBalanced,
     faSun,
     faTools,
     faTrashAlt,
     faUser,
-    faWineBottle,
+    faWineBottle
     // Brand
     // Regular
-    farQuestionCircle
+    //farQuestionCircle
 );

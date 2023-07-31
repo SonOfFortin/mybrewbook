@@ -35,15 +35,24 @@ const Retail = () => {
         StyleId: receiptInfo.StyleId,
         ImageSrc: receiptInfo.Image
     });
+    const [equipment, setEquipment] = useState({
+        AutoScaling: receiptInfo.AutoScaling
+    });
 
     const handelInfoChange = e => {
-        console.log("icit 2");
         setInfo(prev => ({
             ...prev,
             [e.target.id]:
                 e.target.id === "StyleId"
                     ? parseInt(e.target.value)
                     : e.target.value
+        }));
+    };
+
+    const handelEquipmentChange = e => {
+        setEquipment(prev => ({
+            ...prev,
+            [e.target.id]: e.target.value
         }));
     };
 
@@ -57,11 +66,13 @@ const Retail = () => {
                         StyleId={info.StyleId}
                         Image={info.ImageSrc}
                         handelChange={handelInfoChange}
-                    />{" "}
-                    SonOfFortin
+                    />
                 </Col>
                 <Col xs={12} lg={6} xl={4}>
-                    <Equipment />v
+                    <Equipment
+                        AutoScaling={equipment.AutoScaling}
+                        handelChange={handelEquipmentChange}
+                    />
                 </Col>
                 <Col xs={12} lg={6} xl={3}>
                     <InfoStyle />

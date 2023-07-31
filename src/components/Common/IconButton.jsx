@@ -12,7 +12,7 @@ const IconButton = ({
     children,
     ...rest
 }) => (
-    <Button {...rest}>
+    <Button {...rest} variant="outline-primary">
         {iconAlign === "right" && children}
         <FontAwesomeIcon
             icon={icon}

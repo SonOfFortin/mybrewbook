@@ -272,7 +272,7 @@ const SettingsNotifConfig = ({ name, nameProp, value, icon, helpMsg }) => {
                             >
                                 <span>
                                     <FontAwesomeIcon
-                                        icon={["far", "question-circle"]}
+                                        icon={"circle-question"}
                                         transform="shrink-1"
                                         className="ms-1 text-400"
                                     />
