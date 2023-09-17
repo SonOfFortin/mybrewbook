@@ -6,6 +6,7 @@ import store from "./utils/store/index";
 import { QueryClient, QueryClientProvider } from "react-query";
 import MainRoutes from "./routes/index";
 import "./helpers/initFA";
+//import * as serviceWorker from "./serviceWorker";
 
 const root = ReactDOM.createRoot(document.getElementById("main"));
 
@@ -13,11 +14,16 @@ const root = ReactDOM.createRoot(document.getElementById("main"));
 const queryClient = new QueryClient();
 
 root.render(
-    <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
-            <React.StrictMode>
+    <React.StrictMode>
+        <QueryClientProvider client={queryClient}>
+            <Provider store={store}>
                 <MainRoutes />
-            </React.StrictMode>
-        </Provider>
-    </QueryClientProvider>
+            </Provider>
+        </QueryClientProvider>
+    </React.StrictMode>
 );
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+//serviceWorker.unregister();

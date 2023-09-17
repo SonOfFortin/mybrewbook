@@ -8,12 +8,16 @@ import {
     faArrowRightArrowLeft,
     faBell,
     faBook,
+    faBookOpen,
     faBoxes,
+    faCandyCane,
     faChartPie,
     faChevronDown,
     faChevronUp,
+    faCircleCheck,
     faCircleInfo,
     faCircleQuestion,
+    faCircleXmark,
     faClock,
     faCommentSms,
     faEnvelope,
@@ -31,6 +35,7 @@ import {
     faTools,
     faTrashAlt,
     faUser,
+    faWheatAwn,
     faWineBottle
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -39,12 +44,16 @@ library.add(
     faArrowRightArrowLeft,
     faBell,
     faBook,
+    faBookOpen,
     faBoxes,
+    faCandyCane,
     faChartPie,
     faChevronDown,
     faChevronUp,
+    faCircleCheck,
     faCircleInfo,
     faCircleQuestion,
+    faCircleXmark,
     faClock,
     faCommentSms,
     faEnvelope,
@@ -62,6 +71,7 @@ library.add(
     faTools,
     faTrashAlt,
     faUser,
+    faWheatAwn,
     faWineBottle
     // Brand
     // Regular
