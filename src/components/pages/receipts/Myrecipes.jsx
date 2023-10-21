@@ -28,7 +28,7 @@ const MyRecipes = () => {
     return (
         <div>
             <CardList
-                IsCollapse={false}
+                IsCollapse={BrassinList.length === 0 ? true : false}
                 Title="Brassage en cours"
                 Data={BrassinList}
             />

@@ -4,6 +4,7 @@ import classNames from "classnames";
 import NavbarTop from "../components/Navbar/NavbarTop";
 import NavbarVertical from "../components/Navbar/NavbarVertical";
 import Footer from "../components/Footer/Footer";
+import { Col, Row } from "react-bootstrap";
 
 const MainLayout = () => {
     const { pathname, hash } = useLocation();
@@ -29,11 +30,19 @@ const MainLayout = () => {
 
     return (
         <div className={"container"}>
-            <NavbarVertical />
-            <div className={classNames("content")}>
+            <header>
                 <NavbarTop />
-                <Outlet />
-            </div>
+            </header>
+            <section>
+                <NavbarVertical />
+                <div className={classNames("content")}>
+                    {/*<NavbarTop />*/}
+
+                    <Outlet />
+
+                    {/*<Footer />*/}
+                </div>
+            </section>
             <Footer />
         </div>
     );
